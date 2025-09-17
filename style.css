@@ -1,0 +1,184 @@
+/* Key CSS styles inspired by both sites: Dark mode from xultra.fun, clean sectional layout from pliny.gg */
+body {
+    font-family: 'Roboto Mono', monospace; /* Tech/code feel */
+    line-height: 1.6;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #000000;
+}
+
+.logo {
+    width: 50px; /* Sets a fixed width while preserving aspect ratio */
+    height: auto; /* Ensures the height adjusts automatically to match the width */
+    margin-right: 1rem; /* Adds right spacing for separation from the title */
+    border-radius: 50%;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: #9400D3;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #9400D3;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+        
+h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+        
+p {
+    margin: 0.5rem 0;
+}
+        
+a {
+    color:	#DDA0DD;
+    text-decoration: none;
+}
+        
+a:hover {
+    text-decoration: underline;
+}
+        
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+        
+section {
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+        
+.team-members, .projects, .facts, .support {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+        
+.team-member, .project-item, .fact-item, .support-option {
+    background-color: #222222;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Simple animation for hover */
+}
+        
+.team-member:hover, .project-item:hover, .fact-item:hover, .support-option:hover {
+    transform: scale(1.05);
+}
+
+.team-member {
+    text-align: center;
+}
+        
+ul {
+    list-style-type: none;
+    padding: 0;
+    }
+        
+li {
+    margin-bottom: 1rem;
+}
+        
+li::before {
+    content: '•';
+    color: #00cc00;
+    margin-right: 0.5rem;
+}
+        
+blockquote {
+    font-style: italic;
+    border-left: 4px solid #00cc00;
+    padding-left: 1rem;
+    margin: 1rem 0;
+}
+
+.copyable-address {
+    cursor: pointer; /* Changes mouse cursor to indicate clickability */
+    transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.copyable-address:hover {
+    color: #9400D3;
+}
+
+.profile-img {
+    width: 100%; /* Makes the image responsive to the container width */
+    max-width: 150px; /* Prevents the image from getting too large on wider screens */
+    height: auto; /* Maintains the image's aspect ratio */
+    border-radius: 50%; /* Creates a circular shape for a modern profile look */
+    display: block; /* Treats the image as a block element for centering */
+    margin: 0 auto 1rem auto; /* Centers horizontally and adds bottom spacing */
+}
+
+#matrix-bg {
+    position: fixed; /* Stays fixed to the viewport, even on scroll */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Places it behind all other content */
+    pointer-events: none; /* Allows clicks/mouse events to pass through to underlying elements */
+    opacity: 0.3; /* Low opacity for subtlety; adjust to 0.1-0.5 as needed */
+}
+
+nav {
+    background-color: #000000;
+    position: sticky; /* Sticks to top on scroll */
+    top: 0;
+    z-index: 10; /* Above other content */
+    text-align: center;
+}
+
+nav ul { 
+    display: flex; 
+    justify-content: center; 
+    list-style: none; 
+    padding: 1rem; 
+}
+
+nav li { 
+    margin: 0 1rem; 
+}
+
+html { 
+    scroll-behavior: smooth; /* Smooth scrolling to anchors */
+} 
+
+
+/* ---- Responsive design ---- */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem; /* Reduce padding for tighter mobile fit */
+    }
+    h1 {
+        font-size: 2.5rem; /* Slightly smaller for better proportionality */
+    }
+    .team-members, .projects, .facts, .support {
+        grid-template-columns: 1fr; /* Stack into single column for easy scrolling */
+    }
+    .profile-img {
+        max-width: 120px; /* Scale down image for mobile */
+    }
+}
