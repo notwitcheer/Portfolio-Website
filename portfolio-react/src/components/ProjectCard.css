@@ -1,0 +1,49 @@
+.project-item {
+  background-color: #222222;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-item h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.project-item p {
+  margin: 0.5rem 0;
+}
+
+.project-item a {
+  color: #DDA0DD;
+  text-decoration: none;
+}
+
+.project-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 479px) {
+  .project-item {
+    padding: 1rem;
+  }
+
+  .project-item h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-item {
+    transition: none;
+  }
+
+  .project-item:hover {
+    transform: none;
+  }
+}

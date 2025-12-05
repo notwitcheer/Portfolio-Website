@@ -1,6 +1,7 @@
 {
-    "name": "Witcheer's Cave",
+    "name": "Witcheer - React & Next.js Developer",
     "short_name": "Witcheer",
+    "description": "Portfolio showcasing React & Next.js projects and web development work",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -13,7 +14,9 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#7d40ef",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    "theme_color": "#9400D3",
+    "background_color": "#1a1a1a",
+    "display": "standalone",
+    "start_url": "/",
+    "scope": "/"
 }
