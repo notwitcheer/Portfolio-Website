@@ -33,6 +33,9 @@ const Navigation = () => {
           </a>
         </li>
       </ul>
+      <a href="https://dune.com/witcheer" target="_blank" rel="noopener noreferrer" className="dune-link">
+        I LOVE DASHBOARDS
+      </a>
     </nav>
   );
 };
